@@ -1,0 +1,156 @@
+/* ===== Pure Veg Badge & Branding Styles ===== */
+
+/* Small inline badge for pizza cards */
+.pure-veg-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #16a34a;
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  border: 1px solid #bbf7d0;
+  border-radius: 6px;
+  padding: 2px 7px;
+  margin-right: 6px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: middle;
+  line-height: 1.4;
+}
+
+/* Badge variant for detail pages — slightly larger */
+.pure-veg-badge--detail {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #15803d;
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  border: 1.5px solid #86efac;
+  border-radius: 8px;
+  padding: 4px 10px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Compact indicator next to logo / navbar */
+.pure-veg-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 9px;
+  font-weight: 700;
+  color: #16a34a;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0.85;
+}
+
+.pure-veg-indicator::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  box-shadow: 0 0 4px rgba(34, 197, 94, 0.5);
+}
+
+/* Hero / header trust banner */
+.pure-veg-trust-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #15803d;
+  background: rgba(240, 253, 244, 0.9);
+  border: 1px solid #bbf7d0;
+  border-radius: 20px;
+  padding: 5px 14px;
+  backdrop-filter: blur(4px);
+}
+
+/* For dark backgrounds (hero sections, gradient headers) */
+.pure-veg-trust-banner--light {
+  color: #ffffff;
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid rgba(134, 239, 172, 0.4);
+}
+
+/* Footer trust line */
+.pure-veg-footer {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #86efac;
+}
+
+.pure-veg-footer::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.6);
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  .pure-veg-badge {
+    background: linear-gradient(135deg, rgba(22, 163, 74, 0.12), rgba(22, 163, 74, 0.08));
+    border-color: rgba(34, 197, 94, 0.3);
+    color: #4ade80;
+  }
+
+  .pure-veg-badge--detail {
+    background: linear-gradient(135deg, rgba(22, 163, 74, 0.15), rgba(22, 163, 74, 0.1));
+    border-color: rgba(34, 197, 94, 0.35);
+    color: #4ade80;
+  }
+
+  .pure-veg-indicator {
+    color: #4ade80;
+  }
+
+  .pure-veg-trust-banner {
+    color: #4ade80;
+    background: rgba(22, 163, 74, 0.1);
+    border-color: rgba(34, 197, 94, 0.25);
+  }
+}
+
+/* Also respect class-based dark mode (html.dark) */
+:root.dark .pure-veg-badge,
+.dark .pure-veg-badge {
+  background: linear-gradient(135deg, rgba(22, 163, 74, 0.12), rgba(22, 163, 74, 0.08));
+  border-color: rgba(34, 197, 94, 0.3);
+  color: #4ade80;
+}
+
+:root.dark .pure-veg-badge--detail,
+.dark .pure-veg-badge--detail {
+  background: linear-gradient(135deg, rgba(22, 163, 74, 0.15), rgba(22, 163, 94, 0.1));
+  border-color: rgba(34, 197, 94, 0.35);
+  color: #4ade80;
+}
+
+:root.dark .pure-veg-indicator,
+.dark .pure-veg-indicator {
+  color: #4ade80;
+}
+
+:root.dark .pure-veg-trust-banner,
+.dark .pure-veg-trust-banner {
+  color: #4ade80;
+  background: rgba(22, 163, 74, 0.1);
+  border-color: rgba(34, 197, 94, 0.25);
+}

@@ -1,0 +1,20 @@
+import api from './axios'
+
+export const register = (name, email, phone, password) => api.post('/auth/register', { name, email, phone, password })
+export const verifyEmail = (email, otp) => api.post('/auth/verify-email', { email, otp })
+export const resendOTP = (email) => api.post('/auth/resend-otp', { email })
+export const login = (email, password) => api.post('/auth/login', { email, password })
+export const adminLogin = (email, password) => api.post('/auth/admin-login', { email, password })
+export const forgotPassword = (email) => api.post('/auth/forgot-password', { email })
+export const resetPassword = (email, otp, newPassword) => api.post('/auth/reset-password', { email, otp, newPassword })
+export const getMe = () => api.get('/auth/me')
+export const logout = () => api.post('/auth/logout')
+
+export const getUserProfile = () => api.get('/users/profile')
+export const updateProfile = (data) => api.put('/users/profile', data)
+export const addAddress = (data) => api.post('/users/addresses', data)
+export const updateAddress = (id, data) => api.put(`/users/addresses/${id}`, data)
+export const deleteAddress = (id) => api.delete(`/users/addresses/${id}`)
+export const addToWishlist = (pizzaId) => api.post('/users/wishlist', { pizzaId })
+export const removeFromWishlist = (pizzaId) => api.delete(`/users/wishlist/${pizzaId}`)
+export const getWishlist = () => api.get('/users/wishlist')
