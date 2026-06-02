@@ -10,7 +10,7 @@ PizzaHub is a modern full-stack pizza delivery and restaurant management platfor
 
 🔗 Live Website: https://pizzahub-nine.vercel.app/
 
-🎥 Demo Video: https://youtube.com/your-demo-video
+🎥 Demo Video: https://www.linkedin.com/feed/update/urn:li:ugcPost:7467454764654542849/
 
 ---
 
